@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project:- User Autentication </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            height: 100vh;
+            width: 100vw;
+        }
+        .logo h1
+        {
+            font-family: 'Permanent Marker', cursive;
+            color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+
+        .col-md-4 {
+            margin-top: 100px;
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        input {
+            margin-top: 10px;
+        }
+
+        footer
+        {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            height: auto;
+            width: 100vw;
+            font-family:"Open-Sans";
+            padding-top: 40px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .footer-content
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-content h3{
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+        
+        .footer-content p
+        {
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+
+        }
+
+        .social-networks
+        {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 3rem 0;
+        }
+
+        .social-networks li{
+            margin: 0 10px;
+        }
+
+        .social-networks a{
+            text-decoration: none;
+        }
+
+        .social-networks a i{
+            font-size: 1.1rem;
+            transition: color .4 ease;
+        }
+
+        .social-networks a i:hover{
+            color: aqua;
+        }
+
+        .footer-bottom p{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <h1 class="text-center">Authentication Form</h1>
+            <form onsubmit="validate()">
+                <input type="text" placeholder="username" class="form-control" id="username">
+                <input type="password" placeholder="password" class="form-control" id="password">
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Arvind Sharma</h3>
+            <ul class="social-networks">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Developed by Arvind ! &#169 2022</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username == "Javascript" && password == "udemy") {
+            alert("login succesfully....Welcome Arvind!")
+        }
+        else {
+            alert("invalid login credentials");
+        }
+    }
+</script>
